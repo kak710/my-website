@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    background-color: #e3d2ad; /* Light beige background */
+    background-image: url('path/to/your-background-image.jpg'); /* Add your background image */
+    background-size: cover; /* Cover the entire screen with the background image */
+    background-position: center; /* Center the background image */
+}
+
+header {
+    background: #2b2e4a; /* Dark indigo */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Make nav wrap on smaller screens */
+}
+
+header .main-nav ul li {
+    margin: 0 15px;
+}
+
+header .main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px; /* Adjust as needed */
+}
+
+.contact-form, .social-media {
+    width: 45%; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.contact-form h2, .social-media h2 {
+    color: #2b2e4a; /* Dark indigo */
+    margin-bottom: 20px;
+}
+
+.contact-form label, .social-media ul {
+    margin-bottom: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #2b2e4a; /* Dark indigo */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3c405f; /* Darken on hover */
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media ul li {
+    margin-bottom: 10px;
+}
+
+.social-media ul li a {
+    color: #2b2e4a; /* Dark indigo */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media ul li a:hover {
+    color: #3c405f; /* Darken on hover */
+}

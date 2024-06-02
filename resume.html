@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kshatrap Khewale's Resume</title>
+    <link rel="stylesheet" href="stylesrm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav class="main-nav">
+    	<ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    	</ul>
+		</nav>
+</header>
+    <div class="background">
+        <div class="container">
+            <h1>Kshatrap Khewale's Resume</h1>
+            <div class="links">
+                <a href="documents/black-and-white-resume.pdf" class="black-and-white" download>Download Black and White (Brief)</a>
+                <a href="documents/colored-and-expanded-resume.pdf" class="colored" download>Download Colored and Expanded</a>
+            </div>
+        </div>
+    </div>
+  <script>
+        var frameCount = 50;
+        var currentFrame = 1;
+        var intervalId;
+
+        document.querySelector('.background').addEventListener('mouseenter', function() {
+            intervalId = setInterval(function() {
+                var frameNumber = String(currentFrame).padStart(3, '0');
+                var backgroundUrl = 'url("frames/ezgif-frame-' + frameNumber + '.jpg")';
+                document.querySelector('.background').style.backgroundImage = backgroundUrl;
+                currentFrame = (currentFrame % frameCount) + 1;
+            }, 100); // Adjust interval as needed
+        });
+
+        document.querySelector('.background').addEventListener('mouseleave', function() {
+            clearInterval(intervalId);
+        });
+    </script>
+</body>
+</html>
