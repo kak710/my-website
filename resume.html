@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Page</title>
+    <title>Resume</title>
     <style>
         body, html {
             height: 100%;
@@ -19,6 +19,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
             color: #fff; /* Set text color to white for better contrast */
+            z-index: 1001; /* Ensure content is above the video */
         }
 
         h1 {
@@ -57,22 +58,62 @@
         /* Fullscreen video */
         video {
             position: fixed;
-            top: 50%;
-            left: 50%;
+            top: 0;
+            left: 0;
             min-width: 100%;
             min-height: 100%;
             width: auto;
             height: auto;
             z-index: -1;
-            transform: translate(-50%, -50%);
+        }
+
+        /* Navigation styling */
+        header .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Make nav wrap on smaller screens */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            z-index: 1000; /* Ensure navigation bar is above the video */
+        }
+
+        header .main-nav ul li {
+            margin: 0 15px;
+        }
+
+        header .main-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        header .main-nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <video autoplay muted loop>
-        <source src="videos/background-videore.mp4" type="video/mp4"> <!-- Replace 'background-video.mp4' with the path to your video file -->
+        <source src="videos/background-videore.mp4" type="video/mp4"> <!-- Replace 'background-videore.mp4' with the path to your video file -->
         Your browser does not support the video tag.
     </video>
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
         <h1>Resume</h1>
         <p>Choose an option below:</p>
