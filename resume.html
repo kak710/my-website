@@ -3,48 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kshatrap Khewale's Resume</title>
-    <link rel="stylesheet" href="stylesrm.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+    <title>Button Page</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide the default scrollbars */
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff; /* Set text color to white for better contrast */
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 15px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fullscreen video */
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
-	<header>
-		<nav class="main-nav">
-    	<ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    	</ul>
-		</nav>
-</header>
-    <div class="background">
-        <div class="container">
-            <h1>Kshatrap Khewale's Resume</h1>
-            <div class="links">
-                <a href="documents/black-and-white-resume.pdf" class="black-and-white" download>Download Black and White (Brief)</a>
-                <a href="documents/colored-and-expanded-resume.pdf" class="colored" download>Download Colored and Expanded</a>
-            </div>
+    <video autoplay muted loop>
+        <source src="videos/background-videore.mp4" type="video/mp4"> <!-- Replace 'background-video.mp4' with the path to your video file -->
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h1>Resume</h1>
+        <p>Choose an option below:</p>
+        <div class="button-container">
+            <button onclick="window.location.href='BWRI.html'">Black and white (brief)</button>
+            <button onclick="window.location.href='COERP.html'">Coloured and extended </button>
         </div>
     </div>
-  <script>
-        var frameCount = 50;
-        var currentFrame = 1;
-        var intervalId;
-
-        document.querySelector('.background').addEventListener('mouseenter', function() {
-            intervalId = setInterval(function() {
-                var frameNumber = String(currentFrame).padStart(3, '0');
-                var backgroundUrl = 'url("frames/ezgif-frame-' + frameNumber + '.jpg")';
-                document.querySelector('.background').style.backgroundImage = backgroundUrl;
-                currentFrame = (currentFrame % frameCount) + 1;
-            }, 100); // Adjust interval as needed
-        });
-
-        document.querySelector('.background').addEventListener('mouseleave', function() {
-            clearInterval(intervalId);
-        });
-    </script>
 </body>
 </html>
